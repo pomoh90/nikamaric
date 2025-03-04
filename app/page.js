@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles/Home.module.css';
 import userInfo from './user_info';
-import '../styles/globals.css';
 
 export default function Home() {
   const photos = [
@@ -29,7 +28,6 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [photos.length]);
 
-  // Защита от копирования и скриншотов
   useEffect(() => {
     const preventCopy = (e) => {
       e.preventDefault();
@@ -49,12 +47,30 @@ export default function Home() {
     };
   }, []);
 
+  const smmHeadlines = [
+    "Your Perfect Escape Awaits – Unforgettable Moments with Me",
+    "Elegance, Charm, and a Touch of Magic – Let’s Create Memories",
+    "Sophisticated Companion for Your Wildest Dreams",
+    "Indulge in Luxury – Your Exclusive Date Night Starts Here",
+    "A Class Above – Experience Companionship Like Never Before",
+    "From Dinner to Desire – I’m Your Perfect Plus-One",
+    "Unleash Your Fantasies with a Touch of Elegance",
+    "Where Every Moment Feels Like a Dream – Meet Me Tonight",
+    "Curves, Charm, and Conversation – Ready to Spoil You",
+    "Your Secret Getaway – Discreet, Delightful, and Divine",
+    "More Than Just a Date – An Experience You’ll Crave",
+    "Let’s Make Tonight Unforgettable – Your VIP Awaits",
+    "Beauty with a Purpose – Here to Make Your Day Special",
+    "A Little Naughty, A Lot of Class – Ready for You",
+    "Step Into My World – Luxury Companionship Awaits",
+  ];
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Nika Maric</title>
-        <meta name="description" content="Portfolio of Nika Maric" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Nika Maric - Luxury Escort</title>
+        <meta name="description" content="Experience elegance and companionship with Nika Maric, your exclusive luxury escort." />
+        <link rel="icon" href="/images/img.png" />
       </Head>
 
       <header className={styles.header}>
@@ -113,6 +129,11 @@ export default function Home() {
             Yours,<br />
             <strong>Nika Maric</strong>
           </p>
+          <div className={styles.headlines}>
+            {smmHeadlines.map((headline, index) => (
+              <p key={index} className={styles.headline}>{headline}</p>
+            ))}
+          </div>
         </section>
 
         <section id="appearance" className={styles.section}>
