@@ -4,6 +4,8 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles/Home.module.css';
+import '../styles/globals.css';
+
 import userInfo from './user_info';
 
 export default function Home() {
@@ -70,7 +72,7 @@ export default function Home() {
       <Head>
         <title>Nika Maric - Luxury Escort</title>
         <meta name="description" content="Experience elegance and companionship with Nika Maric, your exclusive luxury escort." />
-        <link rel="icon" href="/images/img.png" />
+        <link rel="icon" href="/images/favicon.ico" />
       </Head>
 
       <header className={styles.header}>
@@ -129,11 +131,7 @@ export default function Home() {
             Yours,<br />
             <strong>Nika Maric</strong>
           </p>
-          <div className={styles.headlines}>
-            {smmHeadlines.map((headline, index) => (
-              <p key={index} className={styles.headline}>{headline}</p>
-            ))}
-          </div>
+          
         </section>
 
         <section id="appearance" className={styles.section}>
