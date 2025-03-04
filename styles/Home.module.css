@@ -72,6 +72,8 @@
   object-fit: cover;
   /* border: 3px solid #dba674; */
   /* border-radius: 10px; */
+
+  filter: contrast(1.3) brightness(1.2) blur(2.5px) noise(100%);
   filter: contrast(1.1) brightness(1.05) blur(0.5px); /* Лёгкий шум */
   pointer-events: none; /* Запрещает взаимодействие с изображением */
 }
