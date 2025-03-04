@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles/Home.module.css';
 import userInfo from './user_info';
+import '../styles/globals.css';
 
 export default function Home() {
   const photos = [
