@@ -6,8 +6,8 @@ const userInfo = {
     // { text: 'Twitter', url: '', label: ''},
   ],
   donations: [
-    { text: 'Incall 1hr - $800' },
-    { text: 'Outcall 1hr - $800 + Uber' },
+    { text: 'Incall 1hr - $1000' },
+    { text: 'Outcall 1hr - $1000 + Uber' },
   ],
 };
 
